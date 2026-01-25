@@ -4,9 +4,12 @@ import 'package:mockito/mockito.dart';
 import 'package:smart_wallet/features/transaction/domain/entities/transaction.dart';
 import 'package:smart_wallet/features/transaction/domain/repositories/transaction_repository.dart';
 import 'package:smart_wallet/features/transaction/domain/usecases/get_transactions.dart';
+import 'package:mockito/annotations.dart';
 
-class MockTransactionRepository extends Mock implements TransactionRepository {}
+import 'get_transactions_test.mocks.dart';
 
+
+@GenerateMocks([TransactionRepository])
 void main() {
   late GetTransactions usecase;
   late MockTransactionRepository mockTransactionRepository;
@@ -22,7 +25,7 @@ void main() {
       mockTransactionRepository.getTransactions(),
     ).thenAnswer((_) async => Right([]));
 
-    final result = await usecase();
+    final result = await usecase.execute();
 
     expect(result, Right(tTransactions));
 

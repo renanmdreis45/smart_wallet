@@ -8,7 +8,7 @@ class GetTransactions {
 
   GetTransactions(this.repository);
 
-  Future<Either<Failure, List<Transaction>>> call() async {
+  Future<Either<Failure, List<Transaction>>> execute() async {
     return await repository.getTransactions();
   }
 }
