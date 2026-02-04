@@ -25,7 +25,7 @@ void main() {
       mockTransactionRepository.getTransactions(),
     ).thenAnswer((_) async => Right(tTransactions));
 
-    final result = await usecase.execute();
+    final result = await usecase();
 
     expect(result, Right<Failure, List<Transaction>>(tTransactions));
 
