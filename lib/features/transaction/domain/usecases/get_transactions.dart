@@ -5,7 +5,7 @@ import 'package:smart_wallet/core/usescases/usecase.dart';
 import 'package:smart_wallet/features/transaction/domain/entities/transaction.dart';
 import 'package:smart_wallet/features/transaction/domain/repositories/transaction_repository.dart';
 
-class GetTransactions implements NoParamsUseCase<List<Transaction>, NoParams> {
+class GetTransactions implements UseCase<List<Transaction>, NoParams> {
   final TransactionRepository repository;
 
   GetTransactions(this.repository);
@@ -18,6 +18,5 @@ class GetTransactions implements NoParamsUseCase<List<Transaction>, NoParams> {
 
 class NoParams extends Equatable {
   @override
-  // TODO: implement props
-  List<Object?> get props => throw UnimplementedError();
+  List<Object?> get props => [];
 }
