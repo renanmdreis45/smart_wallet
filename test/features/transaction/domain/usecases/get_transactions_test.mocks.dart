@@ -43,35 +43,35 @@ class MockTransactionRepository extends _i1.Mock
   }
 
   @override
-  _i4.Future<_i2.Either<_i5.Failure, List<_i6.Transaction>>>
+  _i4.Future<_i2.Either<_i5.Failure, List<_i6.TransactionEntity>>>
   getTransactions() =>
       (super.noSuchMethod(
             Invocation.method(#getTransactions, []),
             returnValue:
                 _i4.Future<
-                  _i2.Either<_i5.Failure, List<_i6.Transaction>>
+                  _i2.Either<_i5.Failure, List<_i6.TransactionEntity>>
                 >.value(
-                  _FakeEither_0<_i5.Failure, List<_i6.Transaction>>(
+                  _FakeEither_0<_i5.Failure, List<_i6.TransactionEntity>>(
                     this,
                     Invocation.method(#getTransactions, []),
                   ),
                 ),
           )
-          as _i4.Future<_i2.Either<_i5.Failure, List<_i6.Transaction>>>);
+          as _i4.Future<_i2.Either<_i5.Failure, List<_i6.TransactionEntity>>>);
 
   @override
-  _i4.Future<_i2.Either<_i5.Failure, _i6.Transaction>> getTransactionById(
+  _i4.Future<_i2.Either<_i5.Failure, _i6.TransactionEntity>> getTransactionById(
     String? id,
   ) =>
       (super.noSuchMethod(
             Invocation.method(#getTransactionById, [id]),
             returnValue:
-                _i4.Future<_i2.Either<_i5.Failure, _i6.Transaction>>.value(
-                  _FakeEither_0<_i5.Failure, _i6.Transaction>(
+                _i4.Future<_i2.Either<_i5.Failure, _i6.TransactionEntity>>.value(
+                  _FakeEither_0<_i5.Failure, _i6.TransactionEntity>(
                     this,
                     Invocation.method(#getTransactionById, [id]),
                   ),
                 ),
           )
-          as _i4.Future<_i2.Either<_i5.Failure, _i6.Transaction>>);
+          as _i4.Future<_i2.Either<_i5.Failure, _i6.TransactionEntity>>);
 }
