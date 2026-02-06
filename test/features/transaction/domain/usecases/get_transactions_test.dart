@@ -18,7 +18,7 @@ void main() {
     usecase = GetTransactions(mockTransactionRepository);
   });
 
-  final tTransactions = <Transaction>[];
+  final tTransactions = <TransactionEntity>[];
 
   test('should get transactions from the repository', () async {
     when(
@@ -27,7 +27,7 @@ void main() {
 
     final result = await usecase(NoParams());
 
-    expect(result, Right<Failure, List<Transaction>>(tTransactions));
+    expect(result, Right<Failure, List<TransactionEntity>>(tTransactions));
 
     verify(mockTransactionRepository.getTransactions());
 

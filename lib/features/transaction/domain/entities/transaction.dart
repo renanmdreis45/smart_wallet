@@ -1,7 +1,7 @@
 import 'package:equatable/equatable.dart';
 
-class Transaction extends Equatable {
-  const Transaction({
+class TransactionEntity extends Equatable {
+  const TransactionEntity({
     required this.id,
     required this.amount,
     required this.date,
